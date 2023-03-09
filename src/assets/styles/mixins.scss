@@ -1,0 +1,20 @@
+@mixin buttonColorByClass ($class, $color, $hoverColor) {
+  #{'&.' + $class} {
+    background-color: $color;
+
+    @include hoverActiveFocus {
+      background-color: $hoverColor;
+    }
+  }
+}
+
+
+@mixin hoverActiveFocus {
+  &:not(:disabled) {
+    &:hover,
+    &:active,
+    &:focus {
+      @content
+    }
+  }
+}

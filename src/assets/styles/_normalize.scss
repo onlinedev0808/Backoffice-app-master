@@ -1,0 +1,30 @@
+@import "~normalize.css";
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+* {
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

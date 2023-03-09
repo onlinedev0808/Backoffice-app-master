@@ -1,0 +1,20 @@
+:root {
+    --primary-bacckground-color: var(--white-color);
+    --secondary-background-color: rgb(250, 250, 250);
+    --secondary-background-color-hover: rgb(236, 232, 232);
+
+    --light-text-color: rgb(136, 136, 136);
+    --dark-text-color: rgb(51, 51, 51);
+    --border-color: rgb(204, 204, 204);
+    --table-border-color: rgb(244, 244, 244);
+
+    --blue-color: rgb(72, 117, 234);
+    --blue-color-1: 72, 117, 234;
+    --orange-color: rgb(234, 196, 72);
+    --red-color: rgb(234, 72, 113);
+    --green-color: rgb(78, 201, 86);
+    --black-color: rgb(0, 0, 0);
+    --white-color: rgb(255, 255, 255);
+    --light-blue-color: rgb(237, 241, 253);
+    --light-blue-color-1: 237, 241, 253;
+}

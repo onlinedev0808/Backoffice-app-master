@@ -1,0 +1,98 @@
+@import "_colors.css";
+@import "fonts";
+@import "modules/vue-tel-input";
+@import "notifications";
+@import "normalize";
+
+html, #app {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: var(--light-text-color);
+  background-color: var(--white-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  height: 100%;
+
+  &.lock {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, .5);
+      z-index: 22;
+    }
+    .loader-wrapper {
+      display: block;
+    }
+  }
+
+  .loader-wrapper {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+  }
+
+  .loader {
+    border: 3px solid;
+    border-color: var(--blue-color) var(--blue-color) transparent var(--blue-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.body-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.page__content {
+  position: relative;
+  padding: 60px 30px;
+
+  &-title {
+    margin-bottom: 40px;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    grid-template-columns: 350px 1fr;
+  }
+}
